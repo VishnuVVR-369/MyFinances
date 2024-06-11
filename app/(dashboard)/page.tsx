@@ -1,10 +1,10 @@
-import { UserButton } from "@clerk/nextjs";
+import Header from "@/components/header";
 
 const HomePage = () => {
   return (
     <div>
-      <h1>This is authenticated Page</h1>
-      <UserButton afterSignOutUrl="/" />
+      <Header />
+      <h1>Dashboard Page</h1>
     </div>
   );
 };
