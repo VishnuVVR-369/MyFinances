@@ -11,7 +11,7 @@ const WelcomeMsg = () => {
         Welcome Back {isLoaded ? ", " : " "} {user?.firstName} 👋
       </h2>
       <p className="text-sm lg:text-base text-[#89b6fd]">
-        Journey to your financial freedom.
+        Journey to your financial freedom begins here.
       </p>
     </div>
   );
