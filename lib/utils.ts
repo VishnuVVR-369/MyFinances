@@ -12,3 +12,11 @@ export function convertAmountToPaisa(amount: number) {
 export function convertAmountFromPaisa(amount: number) {
   return amount / 100;
 }
+
+export function formatCurrency(amount: number) {
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    minimumFractionDigits: 2,
+  }).format(amount);
+}

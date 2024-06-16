@@ -170,7 +170,7 @@ export const TransactionForm = ({
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Payee</FormLabel>
+              <FormLabel>Notes</FormLabel>
               <FormControl>
                 <Textarea
                   {...field}

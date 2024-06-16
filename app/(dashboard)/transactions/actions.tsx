@@ -8,8 +8,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { useOpenAccount } from "@/features/accounts/hooks/useOpenAccount";
-import { useDeleteAccount } from "@/features/accounts/api/useDeleteAccount";
+import { useOpenTransaction } from "@/features/transactions/hooks/useOpenTransaction";
+import { useDeleteTransaction } from "@/features/transactions/api/useDeleteTransaction";
 import { useConfirm } from "@/hooks/useConfirm";
 
 type Props = {
@@ -17,12 +17,12 @@ type Props = {
 };
 
 export const Actions = ({ id }: Props) => {
-  const { onOpen } = useOpenAccount();
+  const { onOpen } = useOpenTransaction();
   const [ConfirmDialog, confirm] = useConfirm(
     "Are you sure?",
-    "You are about to delete the account. This action cannot be undone."
+    "You are about to delete the transaction. This action cannot be undone."
   );
-  const deleteMutation = useDeleteAccount(id);
+  const deleteMutation = useDeleteTransaction(id);
   const handleDelete = async () => {
     const ok = await confirm();
     if (ok) {
