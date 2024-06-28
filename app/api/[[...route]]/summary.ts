@@ -33,7 +33,11 @@ const app = new Hono().get(
     const lastPeriodStart = subDays(startDate, periodLength);
     const lastPeriodEnd = subDays(endDate, periodLength);
 
-    async function fetchFinancialData(userId: string, start: Date, end: Date) {
+    async function fetchFinancialData(
+      userId: string,
+      startDate: Date,
+      endDate: Date
+    ) {
       return await db
         .select({
           income:
